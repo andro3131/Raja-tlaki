@@ -58,14 +58,13 @@ export function Hero() {
           Iz Kamnika · po vsej Sloveniji
         </p>
 
-        <h1 className="mt-5 text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.04] max-w-4xl drop-shadow-lg">
-          Ekipa, ki polaga tlake skupaj{" "}
-          <span className="text-[var(--color-accent)]">že 16 let</span>.
+        <h1 className="mt-5 text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.02] max-w-4xl drop-shadow-lg">
+          Strojni tlaki{" "}
+          <span className="text-[var(--color-accent)]">v enem dnevu</span>.
         </h1>
 
-        <p className="mt-5 text-lg sm:text-xl text-white/90 leading-relaxed max-w-2xl drop-shadow">
-          Strojni estrihi, Baumit ometi in industrijski tlaki s kvarcom — od
-          leta 2010 iz Kamnika, delamo po vsej Sloveniji.
+        <p className="mt-5 text-xl sm:text-2xl text-white/90 leading-snug max-w-2xl drop-shadow font-medium">
+          Ekipa, ki polaga tlake skupaj že 16 let.
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-3">
