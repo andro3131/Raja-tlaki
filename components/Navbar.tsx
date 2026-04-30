@@ -16,7 +16,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-[var(--color-bg)]/85 backdrop-blur-md border-b border-[var(--color-border)]">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 h-20 flex items-center justify-between">
         <Link
           href="/"
           className="flex items-center gap-2"
@@ -25,26 +25,26 @@ export function Navbar() {
           <Image
             src="https://raja-tlaki.b-cdn.net/raja-logo.png"
             alt="Raja-tlaki d.o.o."
-            width={120}
-            height={36}
+            width={180}
+            height={56}
             priority
-            className="h-9 w-auto"
+            className="h-12 w-auto sm:h-14"
           />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-7">
+        <nav className="hidden md:flex items-center gap-8">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors"
+              className="text-base font-semibold text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors"
             >
               {link.label}
             </Link>
           ))}
           <a
             href="tel:+38651349833"
-            className="inline-flex items-center gap-2 rounded-full bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white text-sm font-semibold px-4 py-2 transition-colors"
+            className="inline-flex items-center gap-2 rounded-full bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white text-base font-semibold px-5 py-2.5 transition-colors"
           >
             <svg
               width="14"
@@ -98,20 +98,20 @@ export function Navbar() {
 
       {open && (
         <nav className="md:hidden border-t border-[var(--color-border)] bg-[var(--color-bg)]">
-          <div className="mx-auto max-w-6xl px-4 py-4 flex flex-col gap-3">
+          <div className="mx-auto max-w-6xl px-4 py-5 flex flex-col gap-2">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-base font-medium py-2 text-[var(--color-text)]"
+                className="text-lg font-semibold py-2.5 text-[var(--color-text)]"
               >
                 {link.label}
               </Link>
             ))}
             <a
               href="tel:+38651349833"
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-primary)] text-white font-semibold px-4 py-3"
+              className="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-primary)] text-white text-base font-semibold px-5 py-3.5"
             >
               <svg
                 width="14"
