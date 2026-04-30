@@ -53,12 +53,7 @@ export function Hero() {
       </div>
 
       <div className="relative h-full mx-auto max-w-6xl px-4 sm:px-6 flex flex-col justify-end pb-14 sm:pb-20">
-        <p className="inline-flex items-center gap-2 self-start rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs font-semibold uppercase tracking-wider px-3 py-1.5">
-          <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)]" />
-          Iz Kamnika · po vsej Sloveniji
-        </p>
-
-        <h1 className="mt-5 text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.02] max-w-4xl drop-shadow-lg">
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.02] max-w-4xl drop-shadow-lg">
           Strojni tlaki{" "}
           <span className="text-[var(--color-accent)]">v enem dnevu</span>.
         </h1>

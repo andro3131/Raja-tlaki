@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       "Strojni estrihi, Baumit ometi in industrijski tlaki s kvarcom. Iz Kamnika delamo po vsej Sloveniji.",
     images: [
       {
-        url: "https://raja-tlaki.b-cdn.net/raja-logo.png",
+        url: "https://raja-tlaki.b-cdn.net/raja-logo2%20copy.png",
         width: 1200,
         height: 630,
         alt: "Raja-tlaki d.o.o.",
@@ -66,8 +66,8 @@ export default function RootLayout({
     description:
       "Strojni estrihi, Baumit ometi in industrijski tlaki s kvarcom po vsej Sloveniji.",
     url: "https://raja-tlaki.si",
-    logo: "https://raja-tlaki.b-cdn.net/raja-logo.png",
-    image: "https://raja-tlaki.b-cdn.net/raja-logo.png",
+    logo: "https://raja-tlaki.b-cdn.net/raja-logo2%20copy.png",
+    image: "https://raja-tlaki.b-cdn.net/raja-logo2%20copy.png",
     telephone: "+386-51-349-833",
     email: "rajatlaki@gmail.com",
     address: {

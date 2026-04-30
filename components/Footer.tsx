@@ -7,7 +7,7 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-12 grid gap-10 md:grid-cols-3">
         <div>
           <Image
-            src="https://raja-tlaki.b-cdn.net/raja-logo.png"
+            src="https://raja-tlaki.b-cdn.net/raja-logo2%20copy.png"
             alt="Raja-tlaki d.o.o."
             width={140}
             height={42}

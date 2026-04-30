@@ -23,7 +23,7 @@ export function Navbar() {
           onClick={() => setOpen(false)}
         >
           <Image
-            src="https://raja-tlaki.b-cdn.net/raja-logo.png"
+            src="https://raja-tlaki.b-cdn.net/raja-logo2%20copy.png"
             alt="Raja-tlaki d.o.o."
             width={180}
             height={56}
