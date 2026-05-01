@@ -54,12 +54,15 @@ export function Hero() {
 
       <div className="relative h-full mx-auto max-w-6xl px-4 sm:px-6 flex flex-col justify-end pb-14 sm:pb-20">
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.02] max-w-4xl drop-shadow-lg">
-          Strojni tlaki{" "}
-          <span className="text-[var(--color-accent)]">v enem dnevu</span>.
+          RAJA-TLAKI d.o.o. -{" "}
+          <span className="text-[var(--color-accent)]">
+            Strojni tlaki in ometi
+          </span>
+          .
         </h1>
 
         <p className="mt-5 text-xl sm:text-2xl text-white/90 leading-snug max-w-2xl drop-shadow font-medium">
-          Ekipa, ki polaga tlake skupaj že 16 let.
+          Izkušena ekipa, ki tlake polaga skupaj že 16 let.
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-3">
@@ -102,10 +105,10 @@ export function Hero() {
         </div>
 
         <div className="mt-10 flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/85">
-          <Stat label="20 let izkušenj" />
-          <Stat label="6 zaposlenih" />
-          <Stat label="Cela Slovenija" />
-          <Stat label="Mobilen silos + črpalka" />
+          <Stat label="20+ let izkušenj" />
+          <Stat label="Zagotovljena kvaliteta" />
+          <Stat label="Storitev po celotni Sloveniji" />
+          <Stat label="Lasten mobilen silos + črpalka" />
         </div>
       </div>
 

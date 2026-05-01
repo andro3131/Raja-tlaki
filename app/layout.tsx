@@ -10,11 +10,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://raja-tlaki.si"),
   title: {
-    default: "Raja-tlaki d.o.o. — Strojni estrihi in ometi po vsej Sloveniji",
+    default: "Raja-tlaki d.o.o. — Strojni estrihi in ometi",
     template: "%s · Raja-tlaki d.o.o.",
   },
   description:
-    "Strojni estrihi, Baumit ometi in industrijski tlaki s kvarcom. Iz Kamnika delamo po vsej Sloveniji. 20 let izkušenj, ekipa skupaj 16 let.",
+    "Kakovostni strojni estrihi, Baumit ometi in industrijski tlaki s kvarcom. Ekipa z več kot 20-letnimi izkušnjami. Delamo po vsej Sloveniji.",
   keywords: [
     "strojni estrihi",
     "strojni ometi",
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     locale: "sl_SI",
     url: "https://raja-tlaki.si",
     siteName: "Raja-tlaki d.o.o.",
-    title: "Raja-tlaki d.o.o. — Strojni estrihi in ometi po vsej Sloveniji",
+    title: "Raja-tlaki d.o.o. — Strojni estrihi in ometi",
     description:
-      "Strojni estrihi, Baumit ometi in industrijski tlaki s kvarcom. Iz Kamnika delamo po vsej Sloveniji.",
+      "Kakovostni strojni estrihi, Baumit ometi in industrijski tlaki s kvarcom. Ekipa z več kot 20-letnimi izkušnjami. Delamo po vsej Sloveniji.",
     images: [
       {
         url: "https://raja-tlaki.b-cdn.net/raja-logo2%20copy.png",

@@ -10,25 +10,25 @@ const services = [
     href: "/strojni-estrihi",
     title: "Strojni estrihi",
     description:
-      "Cementni strojni estrih za novogradnje in prenove — na talno gretje, čepasto folijo, naklonski okoli hiše ali v mansardi.",
+      "Cementni strojni estrihi za novogradnje in prenove — primerni za talno gretje, naklone okoli hiše ali mansarde.",
   },
   {
     href: "/strojni-ometi",
     title: "Strojni ometi",
     description:
-      "Notranji omet z Baumit Ratio 26 — primeren tudi za kopalnice in kuhinje. Strojno nanesen, gladek, brez razpok.",
+      "Notranji ometi z Baumit Ratio 26. Primerni tudi za kopalnice in kuhinje. Strojni nanos zagotavlja gladko površino brez razpok.",
   },
   {
     href: "/industrijski-tlaki",
     title: "Industrijski tlaki s kvarcom",
     description:
-      "Glajen beton s kvarcom za hale, delavnice in poslovne prostore. Trpežna površina, ki prenese težo viličarjev in obrat strojev.",
+      "Glajen beton s kvarčnim posipom za hale in delavnice. Trpežna površina, ki prenese težke obremenitve in viličarje.",
   },
   {
     href: "/toplotna-izolacija",
     title: "Toplotna izolacija + stirobeton",
     description:
-      "Priprava podloge pred estrihom — toplotna izolacija, stirobeton, alu folija. Vse iz ene roke.",
+      "Celovita priprava podlage pred estrihom — polaganje toplotne izolacije, stirobetona in folij.",
   },
 ];
 
@@ -142,8 +142,9 @@ function ServicesPreview() {
             Kaj delamo
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[var(--color-text-muted)] leading-relaxed">
-            Vse iz ene roke — od priprave podloge do gladko zglajenega tlaka.
-            Lasten silos, betonska črpalka in 6-člana ekipa.
+            Zagotavljamo celoten proces - od priprave podlage do gladko
+            zglajenega tlaka. Z lastnim silosom in ekipo 6 mojstrov zagotavljamo
+            hitrost in kakovost.
           </p>
         </div>
 
@@ -193,7 +194,7 @@ function TrustBlock() {
             Zakaj Raja-tlaki
           </p>
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[var(--color-primary)]">
-            Štirje razlogi, ki nas ločijo
+            Štirje razlogi za sodelovanje z nami
           </h2>
         </div>
 
