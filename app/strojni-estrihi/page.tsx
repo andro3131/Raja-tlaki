@@ -186,6 +186,106 @@ export default function StrojniEstrihi() {
         </section>
 
         <section className="py-16 sm:py-20">
+          <div className="mx-auto max-w-3xl px-4 sm:px-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--color-primary)]">
+              Vezani estrih in drseči (plavajoči) estrih
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-[var(--color-text-muted)] leading-relaxed">
+              Dve osnovni izvedbi strojnega estriha. Pravi izbor je odvisen od
+              podlage, obremenitev in tega, ali greste na talno gretje.
+            </p>
+
+            <div className="mt-8 grid md:grid-cols-2 gap-5">
+              <div className="bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] p-6">
+                <h3 className="text-lg font-bold text-[var(--color-primary)]">
+                  Vezani estrih
+                </h3>
+                <p className="mt-3 text-sm text-[var(--color-text-muted)] leading-relaxed">
+                  Nanesen direktno na betonsko podlago, brez ločilnega sloja.
+                  Tanjše izvedbe (običajno 3–5 cm), hitrejši in cenejši — primeren
+                  za prostore z manjšimi obremenitvami in stabilno podlago.
+                </p>
+              </div>
+              <div className="bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] p-6">
+                <h3 className="text-lg font-bold text-[var(--color-primary)]">
+                  Drseči (plavajoči) estrih
+                </h3>
+                <p className="mt-3 text-sm text-[var(--color-text-muted)] leading-relaxed">
+                  Ločen od podlage z izolacijo ali ločilno folijo. Standardna
+                  izvedba pri talnem gretju in tam, kjer rabimo zvočno ali
+                  toplotno izolacijo. Debelejši (5–7 cm), bolj odporen na
+                  obremenitve.
+                </p>
+              </div>
+            </div>
+
+            <p className="mt-6 text-base text-[var(--color-text-muted)]">
+              Izvajamo oba tipa, skladno s projektom in zahtevami investitorja.
+            </p>
+          </div>
+        </section>
+
+        <section
+          id="talno-gretje"
+          className="py-16 sm:py-20 bg-[var(--color-bg-alt)] scroll-mt-20"
+        >
+          <div className="mx-auto max-w-3xl px-4 sm:px-6">
+            <p className="text-sm font-semibold uppercase tracking-wider text-[var(--color-accent)]">
+              Specializacija
+            </p>
+            <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-[var(--color-primary)]">
+              Strojni estrih za talno gretje
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-[var(--color-text-muted)] leading-relaxed">
+              Talno gretje postavi posebne zahteve: estrih mora ravnomerno
+              prevajati toploto, ne sme razpokati ob širjenju cevi in mora
+              pokriti cevi z zadostno plastjo nad njimi.
+            </p>
+
+            <div className="mt-8 bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] p-6">
+              <h3 className="text-lg font-bold text-[var(--color-primary)]">
+                Standardna sestava nad talnim gretjem
+              </h3>
+              <ol className="mt-4 space-y-3 text-base text-[var(--color-text)]">
+                <SestavaStep
+                  no={1}
+                  text="EPS 100 toplotna izolacija (debelina po projektu)"
+                />
+                <SestavaStep no={2} text="Alu folija proti vlagi" />
+                <SestavaStep no={3} text="Cevi talnega gretja" />
+                <SestavaStep
+                  no={4}
+                  text="Strojno zaliti cementni estrih, debeline 6–7 cm"
+                />
+              </ol>
+              <p className="mt-5 text-sm text-[var(--color-text-muted)] leading-relaxed">
+                <strong className="text-[var(--color-text)]">
+                  Alternativa — čepasta folija:
+                </strong>{" "}
+                kadar je višinski profil omejen (pogosto pri prenovah), uporabimo
+                čepasto folijo s kanali za cevi. Estrih nad njo je tanjši,
+                približno 5 cm.
+              </p>
+            </div>
+
+            <h3 className="mt-10 text-xl font-bold text-[var(--color-primary)]">
+              Zakaj strojni estrih za talno gretje
+            </h3>
+            <ul className="mt-4 space-y-3">
+              <BenefitRow text="Strojno mešana mešanica je bolj enotna in bolj enakomerno prevaja toploto." />
+              <BenefitRow text="Manj zračnih žepkov, ki bi zmanjševali učinek talnega gretja." />
+              <BenefitRow text="Hitrejša izvedba — krajše prekinitve gradnje." />
+            </ul>
+
+            <p className="mt-8 text-base text-[var(--color-text-muted)] leading-relaxed">
+              Po izvedbi je treba upoštevati standardno krivuljo prvega
+              ogrevanja, da estrih dehidrira in se postavi v končno obliko,
+              preden položite ploščice ali parket.
+            </p>
+          </div>
+        </section>
+
+        <section className="py-16 sm:py-20">
           <div className="mx-auto max-w-5xl px-4 sm:px-6">
             <h2 className="text-2xl sm:text-3xl font-bold text-[var(--color-primary)]">
               Kako poteka izvedba
@@ -322,5 +422,38 @@ export default function StrojniEstrihi() {
       </main>
       <Footer />
     </>
+  );
+}
+
+function SestavaStep({ no, text }: { no: number; text: string }) {
+  return (
+    <li className="flex items-start gap-3">
+      <span className="shrink-0 w-7 h-7 rounded-full bg-[var(--color-primary)] text-white text-sm font-bold flex items-center justify-center">
+        {no}
+      </span>
+      <span className="pt-0.5">{text}</span>
+    </li>
+  );
+}
+
+function BenefitRow({ text }: { text: string }) {
+  return (
+    <li className="flex items-start gap-3 bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)] px-4 py-3">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="shrink-0 mt-0.5 text-[var(--color-accent)]"
+      >
+        <path d="m9 12 2 2 4-4" />
+        <circle cx="12" cy="12" r="10" />
+      </svg>
+      <span className="text-base text-[var(--color-text)]">{text}</span>
+    </li>
   );
 }
