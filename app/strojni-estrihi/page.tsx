@@ -8,7 +8,7 @@ import { RelatedServices } from "@/components/RelatedServices";
 export const metadata: Metadata = {
   title: "Strojni estrihi po vsej Sloveniji",
   description:
-    "Cementni strojni estrih za talno gretje, naklone in mansarde. Iz Kamnika delamo po vsej Sloveniji, z lastnim silosom in betonsko črpalko.",
+    "Cementni strojni estrih za talno gretje, naklone in mansarde. Iz Kamnika delamo po vsej Sloveniji, z lastnim strojem za mešanje in betonsko črpalko.",
 };
 
 const debelina = [
@@ -49,7 +49,7 @@ const koraki = [
   },
   {
     title: "Dan izvedbe",
-    body: "Pripeljemo silos, betonsko črpalko in ekipo. Strojno zalijemo in zgladimo. Povprečna hiša traja 1 dan.",
+    body: "Pripeljemo material (pesek in cement), stroj za mešanje, betonsko črpalko in ekipo. Strojno zmešamo, zalijemo in zgladimo. Povprečna hiša traja 1 dan.",
   },
   {
     title: "Sušenje",
@@ -60,8 +60,8 @@ const koraki = [
 const priprava = [
   "Dovod 380 V (trifazni priklop, 16 A) — za črpalko in mešalno enoto.",
   "Tekoča voda — vrtna pipa ali interni priklop.",
-  "Dostop za silos in tovornjak — silos je ~2,5 m širok.",
-  "Pripravljena podlaga — toplotna izolacija, čepasta folija ali EPS, alu folija.",
+  "Dostop za tovornjak in stroj za mešanje — potrebujemo prostor za parkiranje in postavitev opreme.",
+  "Pripravljena podlaga — toplotna izolacija (EPS), PVC folija in po potrebi čepasta folija pri talnem gretju.",
 ];
 
 const reference = [
@@ -107,7 +107,7 @@ export default function StrojniEstrihi() {
         <ServiceHero
           eyebrow="Storitev"
           title="Strojni estrihi"
-          subtitle="Cementni strojni estrih za novogradnje in prenove. Iz Kamnika delamo po vsej Sloveniji, z lastnim silosom in betonsko črpalko."
+          subtitle="Cementni strojni estrih za novogradnje in prenove. Iz Kamnika delamo po vsej Sloveniji, z lastnim strojem za mešanje in betonsko črpalko."
         />
 
         <section className="py-16 sm:py-20">
@@ -119,16 +119,21 @@ export default function StrojniEstrihi() {
               <p>
                 Strojni estrih je estrih, ki ga zalijemo s pomočjo{" "}
                 <strong className="text-[var(--color-text)]">
-                  silosa in betonske črpalke
+                  stroja za mešanje in betonske črpalke
                 </strong>
                 , ne pa ročno z mešanjem v betonjerki.
               </p>
               <p>
-                Razlika je velika. Strojno mešana cementna mešanica je bolj
-                enotna, gostejša in bolj raven. Po izvedbi dobite gladek,
-                kompakten tlak, na katerega lahko v predvidenih rokih položite
-                ploščice, parket ali vinil — brez dodatnega samo-razlivnega
-                izravnalnega sloja.
+                Material — pesek in cement — pripeljemo na objekt. V stroju ga
+                zmešamo z natančno količino vode in z betonsko črpalko
+                transportiramo do prostora, kjer estrih zalijemo in zgladimo.
+              </p>
+              <p>
+                Razlika od ročnega je velika. Strojno mešana cementna mešanica
+                je bolj enotna, gostejša in bolj raven. Po izvedbi dobite
+                gladek, kompakten tlak, na katerega lahko v predvidenih rokih
+                položite ploščice, parket ali vinil — brez dodatnega
+                samo-razlivnega izravnalnega sloja.
               </p>
               <p>
                 Strojno polaganje je hitrejše:{" "}
@@ -136,6 +141,13 @@ export default function StrojniEstrihi() {
                   povprečno hišo zalijemo v enem dnevu
                 </strong>
                 , ne v treh.
+              </p>
+              <p className="text-sm">
+                <em>
+                  Možna je tudi izvedba preko silosa, vendar je dražja in jo
+                  redko uporabljamo — naša standardna izvedba je s strojem za
+                  mešanje na objektu.
+                </em>
               </p>
             </div>
           </div>
@@ -251,7 +263,10 @@ export default function StrojniEstrihi() {
                   no={1}
                   text="EPS 100 toplotna izolacija (debelina po projektu)"
                 />
-                <SestavaStep no={2} text="Alu folija proti vlagi" />
+                <SestavaStep
+                  no={2}
+                  text="Alu folija med stiroporom in cevmi (odbija toploto navzgor)"
+                />
                 <SestavaStep no={3} text="Cevi talnega gretja" />
                 <SestavaStep
                   no={4}
@@ -347,7 +362,7 @@ export default function StrojniEstrihi() {
             </ul>
             <p className="mt-6 text-sm text-[var(--color-text-muted)]">
               Če izolacijo in folijo polagate sami, preverimo skupaj. Lahko pa
-              to izvedemo mi — silos prinese vse iz ene roke.
+              to izvedemo mi — pridemo z vsem materialom in opremo iz ene roke.
             </p>
           </div>
         </section>

@@ -108,7 +108,7 @@ export function Hero() {
           <Stat label="20+ let izkušenj" />
           <Stat label="Zagotovljena kvaliteta" />
           <Stat label="Storitev po celotni Sloveniji" />
-          <Stat label="Lasten mobilen silos + črpalka" />
+          <Stat label="Lasten stroj za mešanje + črpalka" />
         </div>
       </div>
 

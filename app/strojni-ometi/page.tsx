@@ -106,8 +106,8 @@ export default function StrojniOmeti() {
                 vlažnostjo, kot so gospodinjske kopalnice, kuhinje in kleti.
               </p>
               <p>
-                Po nanosu površino takoj poravnamo, tako da pridobite gladko
-                podlago za barvo brez dodatnega kitanja.
+                Po nanosu površino takoj poravnamo — stene niso potrebne
+                kitanja, pripravljene so za barvanje.
               </p>
             </div>
           </div>
@@ -129,6 +129,54 @@ export default function StrojniOmeti() {
               <Spec label="Nanos" value="Strojni — silos + mešalna enota" />
               <Spec label="Površina" value="Gladka, pripravljena za barvo" />
             </div>
+          </div>
+        </section>
+
+        <section className="py-16 sm:py-20">
+          <div className="mx-auto max-w-3xl px-4 sm:px-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--color-primary)]">
+              Načini zaključka
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-[var(--color-text-muted)] leading-relaxed">
+              Pri strojnem ometu lahko izberete dva tipa zaključka, glede na to,
+              kako gladke stene želite in kakšen je proračun.
+            </p>
+
+            <div className="mt-8 grid md:grid-cols-2 gap-5">
+              <div className="bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] p-6">
+                <h3 className="text-lg font-bold text-[var(--color-primary)]">
+                  Klasično zaribane stene
+                </h3>
+                <p className="mt-3 text-sm text-[var(--color-text-muted)] leading-relaxed">
+                  Stene zaribamo s standardnim postopkom. Po sušenju površinska
+                  zrnca pobrusimo z žirafo (brusilnik na palici) in stene
+                  direktno prepleskate.
+                </p>
+                <p className="mt-3 text-xs uppercase tracking-wider text-[var(--color-accent)] font-semibold">
+                  Hitreje, ekonomično
+                </p>
+              </div>
+
+              <div className="bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] p-6">
+                <h3 className="text-lg font-bold text-[var(--color-primary)]">
+                  Gladke stene z metuljčkom
+                </h3>
+                <p className="mt-3 text-sm text-[var(--color-text-muted)] leading-relaxed">
+                  Omet poravnamo s posebnim dleterjem — t. i. metuljčkom. Stene
+                  so bolj gladke, izvedba pa porabi manj časa in izravnalne
+                  mase za morebitno kitanje.
+                </p>
+                <p className="mt-3 text-xs uppercase tracking-wider text-[var(--color-accent)] font-semibold">
+                  Visok standard videza
+                </p>
+              </div>
+            </div>
+
+            <p className="mt-6 text-base text-[var(--color-text-muted)]">
+              Za visok končni standard priporočamo gladke stene z metuljčkom.
+              Za standardne bivalne prostore je klasična izvedba povsem
+              zadostna.
+            </p>
           </div>
         </section>
 

@@ -22,7 +22,7 @@ const koraki = [
   },
   {
     title: "Polaganje izolacije",
-    body: "Polaganje toplotne izolacije, alu folije, čepaste folije ali stirobetona — odvisno od zahtev.",
+    body: "Polaganje toplotne izolacije, PVC folije (oz. alu folije pri talnem gretju), čepaste folije ali stirobetona — odvisno od zahtev.",
   },
   {
     title: "Estrih",
@@ -48,7 +48,7 @@ const prednosti = [
 const faqs = [
   {
     q: "Kakšne izolacije polagate?",
-    a: "Standardno EPS 100 (ekspandiran polistiren) v debelinah po projektu, alu folijo proti vlagi in čepasto folijo za talno gretje. Tudi stirobeton kot lažja izravnalna plast.",
+    a: "Standardno EPS 100 (ekspandiran polistiren) v debelinah po projektu, PVC folijo proti vlagi in čepasto folijo za vodenje cevi talnega gretja. Pri talnem gretju, ki leži direktno na stiroporu, namesto PVC folije uporabimo alu folijo med stiroporom in cevmi. Po potrebi tudi stirobeton kot lažja izravnalna plast.",
   },
   {
     q: "Ali izvedete tudi samo izolacijo, brez estriha?",
@@ -56,7 +56,7 @@ const faqs = [
   },
   {
     q: "Kakšna je razlika med EPS 100 in čepasto folijo?",
-    a: "EPS 100 je debelejša toplotna izolacija (ploščica iz polistirena), ki gre kot prvi sloj proti hladni podlagi. Čepasta folija je tanjša podlaga s kanali, ki vodijo cevi talnega gretja. Pogosto se uporabljata skupaj — najprej EPS, potem alu folija, potem čepasta folija.",
+    a: "EPS 100 je debelejša toplotna izolacija (ploščica iz polistirena), ki gre kot prvi sloj proti hladni podlagi. Čepasta folija je tanjša podlaga s kanali, ki vodijo cevi talnega gretja. Pri talnem gretju direktno na stiroporu vmes položimo še alu folijo, ki odbija toploto navzgor.",
   },
   {
     q: "Ali pridete tudi izven Kamnika?",
@@ -83,10 +83,12 @@ export default function ToplotnaIzolacija() {
             <div className="mt-6 space-y-4 text-base sm:text-lg text-[var(--color-text-muted)] leading-relaxed">
               <p>
                 Pred vsakim novim estrihom je treba pripraviti podlago —
-                toplotno izolacijo, alu folijo proti vlagi in čepasto folijo,
-                če gre na talno gretje. Pogosto izolacijo polaga drug izvajalec
-                kot estrih, kar pomeni dva termina, dve ponudbi in deljeno
-                odgovornost, če nekaj ne deluje.
+                toplotno izolacijo (EPS), PVC folijo proti vlagi in čepasto
+                folijo, če gre na talno gretje. Pri talnem gretju direktno na
+                stiroporu uporabimo alu folijo med stiroporom in cevmi.
+                Pogosto izolacijo polaga drug izvajalec kot estrih, kar pomeni
+                dva termina, dve ponudbi in deljeno odgovornost, če nekaj ne
+                deluje.
               </p>
               <p>
                 Pri nas dobite vse iz ene roke: izolacijo položimo isti dan ali
@@ -180,6 +182,24 @@ export default function ToplotnaIzolacija() {
                   </div>
                 </details>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 sm:py-16">
+          <div className="mx-auto max-w-3xl px-4 sm:px-6">
+            <div className="bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] p-6 sm:p-8">
+              <p className="text-xs uppercase tracking-wider text-[var(--color-accent)] font-semibold">
+                Po dogovoru
+              </p>
+              <h2 className="mt-2 text-xl sm:text-2xl font-bold text-[var(--color-primary)]">
+                Hidroizolacija
+              </h2>
+              <p className="mt-3 text-base text-[var(--color-text-muted)] leading-relaxed">
+                Občasno izvedemo tudi hidroizolacijo — predvsem v povezavi z
+                estrihi in pripravo podlage. Če imate vprašanje glede konkretne
+                izvedbe, nas pokličite.
+              </p>
             </div>
           </div>
         </section>

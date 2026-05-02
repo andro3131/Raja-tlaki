@@ -72,7 +72,7 @@ const process = [
   },
   {
     title: "Priprava objekta",
-    body: "Pripravite: dovod 380 V, tekoča voda, dostop za silos in črpalko. Mi prinesemo vse ostalo.",
+    body: "Pripravite: dovod 380 V, tekoča voda, dostop za stroj in črpalko. Mi prinesemo vse ostalo — pesek, cement in opremo.",
   },
   {
     title: "Izvedba",
@@ -87,7 +87,7 @@ const process = [
 const faqs = [
   {
     q: "Kaj je strojni estrih in zakaj ne navadni?",
-    a: "Strojni estrih zalijemo s pomočjo silosa in betonske črpalke. Mešanica je bolj enotna in gostejša, zato dobite gladek, kompakten tlak — pripravljen na ploščice ali parket brez dodatnega izravnalnega sloja. Strojno polaganje je tudi hitrejše: povprečno hišo zalijemo v enem dnevu.",
+    a: "Strojni estrih zalijemo s pomočjo stroja za mešanje in betonske črpalke. Pesek in cement pripeljemo na objekt, ju zmešamo v stroju z natančno količino vode in črpalko transportiramo do prostora. Mešanica je bolj enotna in gostejša, zato dobite gladek, kompakten tlak — pripravljen na ploščice ali parket brez dodatnega izravnalnega sloja. Strojno polaganje je hitrejše: povprečno hišo zalijemo v enem dnevu.",
   },
   {
     q: "Koliko časa traja izvedba povprečne hiše?",
@@ -95,7 +95,7 @@ const faqs = [
   },
   {
     q: "Kaj moram pripraviti pred prihodom ekipe?",
-    a: "Trifazni priklop 380 V (16 A), dostop do tekoče vode, dostop za silos in tovornjak, ter pripravljeno podlago (toplotna izolacija, čepasta folija ali EPS, alu folija). Če izolacijo polagate sami, preverimo skupaj — lahko pa vse izvedemo mi.",
+    a: "Trifazni priklop 380 V (16 A), dostop do tekoče vode, dostop za tovornjak in stroj za mešanje, ter pripravljeno podlago (toplotna izolacija EPS, PVC folija; pri talnem gretju direktno na stiroporu uporabimo alu folijo med stiroporom in cevmi, po potrebi tudi čepasto folijo). Če izolacijo polagate sami, preverimo skupaj — lahko pa vse izvedemo mi.",
   },
   {
     q: "V kakšnih debelinah delate strojne estrihe?",
@@ -143,7 +143,7 @@ function ServicesPreview() {
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[var(--color-text-muted)] leading-relaxed">
             Zagotavljamo celoten proces - od priprave podlage do gladko
-            zglajenega tlaka. Z lastnim silosom in ekipo 6 mojstrov zagotavljamo
+            zglajenega tlaka. Z lastno opremo in ekipo 6 mojstrov zagotavljamo
             hitrost in kakovost.
           </p>
         </div>
