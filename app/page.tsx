@@ -170,9 +170,11 @@ function ServicesPreview() {
             Kaj delamo
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[var(--color-text-muted)] leading-relaxed">
-            Zagotavljamo celoten proces - od priprave podlage do gladko
-            zglajenega tlaka. Z lastno črpalko in ekipo šestih mojstrov
-            zagotavljamo hitrost in kakovost.
+            Izvajamo storitve polaganja strojnega estriha, strojnih ometov,
+            industrijskih tlakov s kvarcom ter toplotne izolacije s
+            stirobetonom. Zagotovimo celoten proces dela - od priprave podlage
+            do gladko zglajenega tlaka ali ometa. Z lastno črpalko, silosom in
+            ekipo šestih mojstrov zagotavljamo hitrost in kakovost.
           </p>
         </div>
 
