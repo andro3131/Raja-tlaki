@@ -35,19 +35,19 @@ const services = [
 const trust = [
   {
     title: "20 let izkušenj",
-    body: "Od 2010 kot d.o.o., pred tem v stroki že leta.",
+    body: "Od 2010 delujemo kot podjetje (d.o.o.), pred tem pa smo v isti stroki delovali že leta.",
   },
   {
     title: "Ekipa skupaj 16 let",
-    body: "Iste roke od prvega do zadnjega projekta.",
+    body: "Jedro naše ekipe je skupaj že več kot 16 let.",
   },
   {
     title: "Cela Slovenija",
-    body: "Kamnik kot baza, delamo od Kopra do Maribora.",
+    body: "Delamo po vsej Sloveniji, bili smo pa tudi že na Hrvaškem.",
   },
   {
-    title: "Stojimo za delom",
-    body: "Beton drži desetletja — če bi se kaj pojavilo, se oglasimo.",
+    title: "Stojimo za svojim delom",
+    body: "Kvaliteta izvedbe naših projektov govori sama zase. Držimo se dogovorov in izvedemo storitev v željenih rokih. Če pa bi se težave vseeno pojavile, jih bomo z veliko skrbnostjo tudi odpravili.",
   },
 ];
 
@@ -63,51 +63,79 @@ const references = [
 
 const process = [
   {
-    title: "Pokličete",
-    body: "Po telefonu se zmeniva za ogled — na vašem objektu ali iz tlorisa.",
+    title: "Poizvedba",
+    body: "Pokličite nas ali nam napišite sporočilo. Dogovorili se bomo za ogled na vašem objektu.",
   },
   {
     title: "Brezplačna ponudba",
-    body: "Pisno, s količinami in rokom. Brez obveznosti.",
+    body: "Po ogledu prejmete ponudbo, ki je brezplačna in brez obveznosti.",
   },
   {
     title: "Priprava objekta",
-    body: "Pripravite: dovod 380 V, tekoča voda, dostop za stroj in črpalko. Mi prinesemo vse ostalo — pesek, cement in opremo.",
+    body: "Za pripravo objekta je treba zagotoviti elektriko, tekočo vodo, dostop za stroj in črpalko. Mi prinesemo vse ostalo — material in opremo.",
   },
   {
     title: "Izvedba",
-    body: "Strojni nanos, ekipa 4–6 ljudi. Povprečna hiša ~1 dan za estrih.",
+    body: "Po pripravi objekta začnemo z izvedbo. Držimo se dogovorjenih rokov.",
   },
   {
     title: "Po izvedbi",
-    body: "Beton drži desetletja. Če bi se kaj pojavilo, se oglasimo.",
+    body: "Po izvedbi dobite vse potrebne informacije o negi in sušenju estriha ali ometa. Če bi slučajno nastopile kakšne težave, jih bomo obravnavali z vso skrbnostjo.",
   },
 ];
 
 const faqs = [
   {
-    q: "Kaj je strojni estrih in zakaj ne navadni?",
-    a: "Strojni estrih zalijemo s pomočjo stroja za mešanje in betonske črpalke. Pesek in cement pripeljemo na objekt, ju zmešamo v stroju z natančno količino vode in črpalko transportiramo do prostora. Mešanica je bolj enotna in gostejša, zato dobite gladek, kompakten tlak — pripravljen na ploščice ali parket brez dodatnega izravnalnega sloja. Strojno polaganje je hitrejše: povprečno hišo zalijemo v enem dnevu.",
+    q: "Lokacija izvedbe?",
+    a: "Delamo po vsej Sloveniji.",
   },
   {
-    q: "Koliko časa traja izvedba povprečne hiše?",
-    a: "Strojni estrih za povprečno enodružinsko hišo zalijemo v približno enem dnevu. Na večjih objektih nekaj dni, odvisno od kvadrature in dostopnosti.",
+    q: "Kakšna je cena?",
+    a: "Cena je odvisna od kvadrature, debeline, dostopnosti objekta in priprave podlage. Za realno številko potrebujemo tloris ali kratek ogled — ponudba je brezplačna.",
   },
   {
-    q: "Kaj moram pripraviti pred prihodom ekipe?",
-    a: "Trifazni priklop 380 V (16 A), dostop do tekoče vode, dostop za tovornjak in stroj za mešanje, ter pripravljeno podlago (toplotna izolacija EPS, PVC folija; pri talnem gretju direktno na stiroporu uporabimo alu folijo med stiroporom in cevmi, po potrebi tudi čepasto folijo). Če izolacijo polagate sami, preverimo skupaj — lahko pa vse izvedemo mi.",
+    q: "Koliko časa sušenja je potrebno pred polaganjem talnih oblog?",
+    a: "Vinil ali parket: pri standardni debelini 6–7 cm računamo nekje 1 cm = približno 1 teden. Tlak je torej pripravljen v 6 do 8 tednih, odvisno od prostora in temperature. Ploščice: le-te se lahko polagajo že po 1–2 tednih.",
   },
   {
-    q: "V kakšnih debelinah delate strojne estrihe?",
-    a: "Na talno gretje + EPS 100 + alu folija standardno 6–7 cm. Na čepasto folijo (talno gretje) ~5 cm. Naklonski estrih okoli hiše in estrih v mansardi izvajamo po projektu.",
+    q: "Ali estrih razpoka?",
+    a: "Pri pravilno izvedenem strojnem estrihu z dilatacijami na pravih mestih razpok ne pričakujemo. Dilatacije postavimo v skladu s projektom in debelino plošče.",
   },
   {
-    q: "Ali pridete tudi izven Kamnika?",
-    a: "Da — delamo po vsej Sloveniji. Iz Kamnika do Kopra, Maribora ali Lendave ni težave. Velikost ekipe in mobilna oprema sta narejena za to.",
+    q: "Kdaj lahko hodim po estrihu?",
+    a: "Previdno že po 24–48 urah. Polna obremenitev (gradbeno orodje, material) po približno enem tednu.",
   },
   {
-    q: "Kdaj lahko po izvedbi hodim po tlaku ali polagam ploščice?",
-    a: "Previdno hodim že po 24–48 urah. Ploščice in parket se polagajo po standardnih krivuljah sušenja — pri debelini 6–7 cm računamo nekje 6–8 tednov, odvisno od prostora in temperature. Točen rok povemo po izvedbi.",
+    q: "Kaj je Baumit Ratio 26 in zakaj se ga uporablja?",
+    a: "Baumit Ratio 26 (oznaka tudi MPI 26) je enoslojni mavčno-apneno-cementni notranji omet z zrnavostjo 1 mm. Primeren je za bivalne prostore, kjer rabite gladko podlago za barvanje, in tudi za prostore s povišano vlažnostjo — kopalnice, kuhinje, kleti. Strojni nanos je hitrejši in enakomernejši od ročnega.",
+  },
+  {
+    q: "Ali je primeren za kopalnice in kuhinje?",
+    a: "Da. Baumit Ratio 26 je formuliran tako, da prenese povišano vlažnost gospodinjskih kopalnic, kuhinj in kleti. Za stalno mokre cone v kopalnici (območje tuša) priporočamo dodatno hidroizolacijo pod ploščicami.",
+  },
+  {
+    q: "Ali delate tudi zunanje omete in fasade?",
+    a: "Da — referenca papirnica Količevo je fasada s cementnim strojnim ometom. Pokličite nas za konkretno ponudbo.",
+  },
+  {
+    q: "Kaj pomeni 'glajenje s kvarcom'?",
+    a: "V svežo betonsko maso vsipamo posebno mešanico s kvarčnim peskom in cementom (utrjevalec površine). Z večkratnim strojnim glajenjem ta mešanica utrdi zgornji sloj betona — dobimo trpežno, gosto, gladko in sijajno površino brez prahu, ki prenese težo viličarjev in stalno obtežitev strojev. To je ena izvedba 'iz enega kosa', brez dodatnih oblog.",
+  },
+  {
+    q: "Kakšne obremenitve prenese industrijski tlak?",
+    a: "Industrijski tlak s kvarcom je dimenzioniran za logistično in proizvodno rabo — viličarji, težka skladiščna oprema, stroji s stalnim obratom. Konkretne nosilnosti določimo po projektu glede na debelino plošče in armaturo.",
+  },
+  {
+    q: "V kakšnem obsegu je možna izvedba industrijskega tlaka?",
+    a: "Izvedli smo že posamezne objekte preko 12.000 m² (Lek Mengeš). Seveda je možna izvedba tako manjših delavnic (cca 100 m²) kot tudi velikih industrijskih hal.",
+  },
+  {
+    q: "Kakšne izolacije polagate?",
+    a: "Standardno EPS 100 (ekspandiran polistiren) v debelinah po projektu in PVC folijo proti vlagi. Po potrebi tudi stirobeton kot lažja izravnalna plast.",
+  },
+  {
+    q: "Kaj če se po izvedbi vseeno kaj pojavi?",
+    a: "Beton, ki ga zalijemo, drži desetletja. Če bi pa vseeno nastala kakšna težava, jo bomo seveda z vso skrbnostjo obravnavali.",
   },
 ];
 
@@ -143,8 +171,8 @@ function ServicesPreview() {
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[var(--color-text-muted)] leading-relaxed">
             Zagotavljamo celoten proces - od priprave podlage do gladko
-            zglajenega tlaka. Z lastno opremo in ekipo 6 mojstrov zagotavljamo
-            hitrost in kakovost.
+            zglajenega tlaka. Z lastno črpalko in ekipo šestih mojstrov
+            zagotavljamo hitrost in kakovost.
           </p>
         </div>
 
@@ -291,11 +319,11 @@ function Process() {
             Postopek
           </p>
           <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[var(--color-primary)]">
-            Od klica do gotovega tlaka
+            Od enega klica do gotovega tlaka
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[var(--color-text-muted)] leading-relaxed">
-            Brez presenečenj. Vsako fazo poznamo na pamet, ker se ponavlja že
-            20 let.
+            Naša izvedba poteka hitro in kvalitetno, kar nam zagotavljajo naše
+            dolgoletne izkušnje.
           </p>
         </div>
 
@@ -342,13 +370,14 @@ function About() {
               O nas
             </p>
             <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[var(--color-primary)]">
-              Šest ljudi, ki se znajdejo na vsakem gradbišču
+              Ekipa šestih ljudi, ki se znajdejo na vsakem gradbišču
             </h2>
             <div className="mt-6 space-y-4 text-base sm:text-lg text-[var(--color-text-muted)] leading-relaxed">
               <p>
-                Uroš Ržišnik je leta 2010 registriral Raja-tlake kot d.o.o. — pred
-                tem je v stroki delal že leta. Danes ekipa šteje 6 ljudi,
-                sodelavci so z njim po 16 let in več.
+                Uroš Ržišnik je leta 2010 registriral podjetje Raja-tlaki
+                d.o.o., pred tem pa je v stroki delal že kar nekaj let. Danes
+                njegova ekipa šteje 6 ljudi, jedro ekipe pa je skupaj že več kot
+                16 let.
               </p>
               <p>
                 Delamo strojne estrihe, Baumit ometov in industrijske tlake po
@@ -361,9 +390,9 @@ function About() {
                 .
               </p>
               <p>
-                Cene se vedno dogovorimo individualno, ker ni dveh enakih
-                objektov. Beton, ki ga zalijemo, drži desetletja — in če bi se
-                vseeno kaj pojavilo, se oglasimo.
+                Cene se vedno dogovorimo individualno glede na vrsto in obseg
+                dela. Naše reference govorijo same zase. Morebitne težave pa
+                obravnavamo hitro in z vso skrbnostjo.
               </p>
             </div>
           </div>

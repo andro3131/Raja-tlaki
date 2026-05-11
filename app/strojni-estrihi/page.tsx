@@ -28,37 +28,14 @@ const debelina = [
     opis: "Za odvodnjavanje, terase in hišne dovoze.",
   },
   {
-    tip: "Estrih v mansardi",
+    tip: "Stiroestrih v mansardi",
     debelina: "po projektu",
-    opis: "Lažje izvedbe na lesenih ali laganih konstrukcijah.",
-  },
-];
-
-const koraki = [
-  {
-    title: "Pokličete ali napišete",
-    body: "Po telefonu se zmeniva za ogled na objektu, ali nam pošljete tloris po e-pošti.",
-  },
-  {
-    title: "Pisna ponudba",
-    body: "V nekaj dneh dobite konkretno ponudbo s količinami, debelino in rokom izvedbe. Brez obveznosti.",
-  },
-  {
-    title: "Termin",
-    body: "Dogovorimo se za datum. V tem času pripravite objekt.",
-  },
-  {
-    title: "Dan izvedbe",
-    body: "Pripeljemo material (pesek in cement), stroj za mešanje, betonsko črpalko in ekipo. Strojno zmešamo, zalijemo in zgladimo. Povprečna hiša traja 1 dan.",
-  },
-  {
-    title: "Sušenje",
-    body: "Estrih se suši po standardnih krivuljah. Točen rok za polaganje ploščic ali parketa vam povemo po izvedbi.",
+    opis: "Izvedbe na lesenih ali lahkih konstrukcijah.",
   },
 ];
 
 const priprava = [
-  "Dovod 380 V (trifazni priklop, 16 A) — za črpalko in mešalno enoto.",
+  "Dovod 220 V za mešalno enoto.",
   "Tekoča voda — vrtna pipa ali interni priklop.",
   "Dostop za tovornjak in stroj za mešanje — potrebujemo prostor za parkiranje in postavitev opreme.",
   "Pripravljena podlaga — toplotna izolacija (EPS), PVC folija in po potrebi čepasta folija pri talnem gretju.",
@@ -74,8 +51,8 @@ const reference = [
 
 const faqs = [
   {
-    q: "Koliko časa sušenja pred polaganjem ploščic?",
-    a: "Pri standardni debelini 6–7 cm računamo nekje 1 cm = približno 1 teden. Tlak za ploščice je torej pripravljen v 6 do 8 tednih, odvisno od prostora in temperature. Točen rok povemo po izvedbi.",
+    q: "Koliko časa sušenja je potrebno pred polaganjem talnih oblog?",
+    a: "Vinil ali parket: pri standardni debelini 6–7 cm računamo nekje 1 cm = približno 1 teden. Tlak je torej pripravljen v 6 do 8 tednih, odvisno od prostora in temperature. Ploščice: le-te se lahko polagajo že po 1–2 tednih.",
   },
   {
     q: "Ali estrih razpoka?",
@@ -86,8 +63,8 @@ const faqs = [
     a: "Previdno že po 24–48 urah. Polna obremenitev (gradbeno orodje, material) po približno enem tednu.",
   },
   {
-    q: "Ali pridete tudi izven Kamnika?",
-    a: "Da — delamo po vsej Sloveniji. Iz Kamnika do Kopra, Maribora ali Lendave ni težave. Velikost ekipe in mobilna oprema sta narejena za to.",
+    q: "Lokacija izvedbe?",
+    a: "Delamo po vsej Sloveniji.",
   },
   {
     q: "Kakšna je cena?",
@@ -95,7 +72,7 @@ const faqs = [
   },
   {
     q: "Kaj če se po izvedbi vseeno kaj pojavi?",
-    a: "Beton, ki ga zalijemo, drži desetletja. Če bi vseeno nastala kakšna težava, se oglasimo in pogledamo skupaj.",
+    a: "Beton, ki ga zalijemo, drži desetletja. Če bi pa vseeno nastala kakšna težava, jo bomo seveda z vso skrbnostjo obravnavali.",
   },
 ];
 
@@ -107,7 +84,7 @@ export default function StrojniEstrihi() {
         <ServiceHero
           eyebrow="Storitev"
           title="Strojni estrihi"
-          subtitle="Cementni strojni estrih za novogradnje in prenove. Iz Kamnika delamo po vsej Sloveniji, z lastnim strojem za mešanje in betonsko črpalko."
+          subtitle="Cementni strojni estrih za novogradnje in prenove. Delamo po vsej Sloveniji, z lastnim strojem za mešanje in betonsko črpalko."
         />
 
         <section className="py-16 sm:py-20">
@@ -121,18 +98,15 @@ export default function StrojniEstrihi() {
                 <strong className="text-[var(--color-text)]">
                   stroja za mešanje in betonske črpalke
                 </strong>
-                , ne pa ročno z mešanjem v betonjerki.
-              </p>
-              <p>
-                Material — pesek in cement — pripeljemo na objekt. V stroju ga
-                zmešamo z natančno količino vode in z betonsko črpalko
+                . Material — pesek in cement — pripeljemo na objekt. V stroju
+                ga zmešamo z natančno količino vode in z betonsko črpalko
                 transportiramo do prostora, kjer estrih zalijemo in zgladimo.
               </p>
               <p>
-                Razlika od ročnega je velika. Strojno mešana cementna mešanica
-                je bolj enotna, gostejša in bolj raven. Po izvedbi dobite
-                gladek, kompakten tlak, na katerega lahko v predvidenih rokih
-                položite ploščice, parket ali vinil — brez dodatnega
+                Razlika od ročnega estriha je velika. Strojno mešana cementna
+                mešanica je bolj enotna, gostejša in bolj ravna. Po izvedbi
+                dobite gladek, kompakten tlak, na katerega lahko v predvidenih
+                rokih položite ploščice, parket ali vinil — brez dodatnega
                 samo-razlivnega izravnalnega sloja.
               </p>
               <p>
@@ -140,14 +114,7 @@ export default function StrojniEstrihi() {
                 <strong className="text-[var(--color-text)]">
                   povprečno hišo zalijemo v enem dnevu
                 </strong>
-                , ne v treh.
-              </p>
-              <p className="text-sm">
-                <em>
-                  Možna je tudi izvedba preko silosa, vendar je dražja in jo
-                  redko uporabljamo — naša standardna izvedba je s strojem za
-                  mešanje na objektu.
-                </em>
+                .
               </p>
             </div>
           </div>
@@ -191,8 +158,8 @@ export default function StrojniEstrihi() {
               </table>
             </div>
             <p className="mt-6 text-base text-[var(--color-text-muted)]">
-              Če niste prepričani, kaj potrebujete — pokličite. Iz tlorisa ali
-              na kratkem ogledu hitro povemo.
+              Če niste prepričani, kaj potrebujete — pokličite in radi pridemo
+              na ogled!
             </p>
           </div>
         </section>
@@ -200,7 +167,7 @@ export default function StrojniEstrihi() {
         <section className="py-16 sm:py-20">
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <h2 className="text-2xl sm:text-3xl font-bold text-[var(--color-primary)]">
-              Vezani estrih in drseči (plavajoči) estrih
+              Vezani estrih in plavajoči estrih
             </h2>
             <p className="mt-4 text-base sm:text-lg text-[var(--color-text-muted)] leading-relaxed">
               Dve osnovni izvedbi strojnega estriha. Pravi izbor je odvisen od
@@ -220,7 +187,7 @@ export default function StrojniEstrihi() {
               </div>
               <div className="bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] p-6">
                 <h3 className="text-lg font-bold text-[var(--color-primary)]">
-                  Drseči (plavajoči) estrih
+                  Plavajoči estrih
                 </h3>
                 <p className="mt-3 text-sm text-[var(--color-text-muted)] leading-relaxed">
                   Ločen od podlage z izolacijo ali ločilno folijo. Standardna
@@ -249,80 +216,15 @@ export default function StrojniEstrihi() {
               Strojni estrih za talno gretje
             </h2>
             <p className="mt-4 text-base sm:text-lg text-[var(--color-text-muted)] leading-relaxed">
-              Talno gretje postavi posebne zahteve: estrih mora ravnomerno
-              prevajati toploto, ne sme razpokati ob širjenju cevi in mora
-              pokriti cevi z zadostno plastjo nad njimi.
+              Talno gretje ima posebne zahteve: estrih mora enakomerno prevajati
+              toploto, ne sme razpokati ob širjenju cevi in mora pokriti cevi z
+              zadostno plastjo nad njimi.
             </p>
 
-            <div className="mt-8 bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] p-6">
-              <h3 className="text-lg font-bold text-[var(--color-primary)]">
-                Standardna sestava nad talnim gretjem
-              </h3>
-              <ol className="mt-4 space-y-3 text-base text-[var(--color-text)]">
-                <SestavaStep
-                  no={1}
-                  text="EPS 100 toplotna izolacija (debelina po projektu)"
-                />
-                <SestavaStep
-                  no={2}
-                  text="Alu folija med stiroporom in cevmi (odbija toploto navzgor)"
-                />
-                <SestavaStep no={3} text="Cevi talnega gretja" />
-                <SestavaStep
-                  no={4}
-                  text="Strojno zaliti cementni estrih, debeline 6–7 cm"
-                />
-              </ol>
-              <p className="mt-5 text-sm text-[var(--color-text-muted)] leading-relaxed">
-                <strong className="text-[var(--color-text)]">
-                  Alternativa — čepasta folija:
-                </strong>{" "}
-                kadar je višinski profil omejen (pogosto pri prenovah), uporabimo
-                čepasto folijo s kanali za cevi. Estrih nad njo je tanjši,
-                približno 5 cm.
-              </p>
-            </div>
-
-            <h3 className="mt-10 text-xl font-bold text-[var(--color-primary)]">
-              Zakaj strojni estrih za talno gretje
-            </h3>
-            <ul className="mt-4 space-y-3">
-              <BenefitRow text="Strojno mešana mešanica je bolj enotna in bolj enakomerno prevaja toploto." />
-              <BenefitRow text="Manj zračnih žepkov, ki bi zmanjševali učinek talnega gretja." />
-              <BenefitRow text="Hitrejša izvedba — krajše prekinitve gradnje." />
-            </ul>
-
-            <p className="mt-8 text-base text-[var(--color-text-muted)] leading-relaxed">
-              Po izvedbi je treba upoštevati standardno krivuljo prvega
-              ogrevanja, da estrih dehidrira in se postavi v končno obliko,
-              preden položite ploščice ali parket.
+            <p className="mt-6 text-base sm:text-lg text-[var(--color-text-muted)] leading-relaxed">
+              Po izvedbi je treba narediti toplotni šok, da se estrih postavi v
+              končno obliko, preden položite ploščice ali parket.
             </p>
-          </div>
-        </section>
-
-        <section className="py-16 sm:py-20">
-          <div className="mx-auto max-w-5xl px-4 sm:px-6">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--color-primary)]">
-              Kako poteka izvedba
-            </h2>
-            <ol className="mt-10 grid md:grid-cols-5 gap-5">
-              {koraki.map((step, i) => (
-                <li
-                  key={step.title}
-                  className="bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] p-5"
-                >
-                  <div className="text-3xl font-bold text-[var(--color-accent)]">
-                    {String(i + 1).padStart(2, "0")}
-                  </div>
-                  <h3 className="mt-3 text-base font-bold text-[var(--color-primary)]">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-[var(--color-text-muted)] leading-relaxed">
-                    {step.body}
-                  </p>
-                </li>
-              ))}
-            </ol>
           </div>
         </section>
 
@@ -361,8 +263,8 @@ export default function StrojniEstrihi() {
               ))}
             </ul>
             <p className="mt-6 text-sm text-[var(--color-text-muted)]">
-              Če izolacijo in folijo polagate sami, preverimo skupaj. Lahko pa
-              to izvedemo mi — pridemo z vsem materialom in opremo iz ene roke.
+              Izolacijo in folijo lahko položite tudi samo, lahko pa to
+              izvedemo mi.
             </p>
           </div>
         </section>
@@ -440,35 +342,3 @@ export default function StrojniEstrihi() {
   );
 }
 
-function SestavaStep({ no, text }: { no: number; text: string }) {
-  return (
-    <li className="flex items-start gap-3">
-      <span className="shrink-0 w-7 h-7 rounded-full bg-[var(--color-primary)] text-white text-sm font-bold flex items-center justify-center">
-        {no}
-      </span>
-      <span className="pt-0.5">{text}</span>
-    </li>
-  );
-}
-
-function BenefitRow({ text }: { text: string }) {
-  return (
-    <li className="flex items-start gap-3 bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)] px-4 py-3">
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="shrink-0 mt-0.5 text-[var(--color-accent)]"
-      >
-        <path d="m9 12 2 2 4-4" />
-        <circle cx="12" cy="12" r="10" />
-      </svg>
-      <span className="text-base text-[var(--color-text)]">{text}</span>
-    </li>
-  );
-}

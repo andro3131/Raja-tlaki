@@ -11,46 +11,22 @@ export const metadata: Metadata = {
     "Notranji omet z Baumit Ratio 26 — enoslojni mavčno-apneno-cementni omet. Primeren tudi za kopalnice in kuhinje. Strojno nanesen, gladek, brez razpok.",
 };
 
-const koraki = [
-  {
-    title: "Pokličete ali napišete",
-    body: "Po telefonu se zmeniva za ogled na objektu, ali nam pošljete tloris po e-pošti.",
-  },
-  {
-    title: "Pisna ponudba",
-    body: "Konkretna ponudba s količinami in rokom. Brez obveznosti.",
-  },
-  {
-    title: "Priprava objekta",
-    body: "Pripravite dovod 380 V, tekočo vodo in dostop za silos. Stene morajo biti suhe in obrise.",
-  },
-  {
-    title: "Strojni nanos",
-    body: "Z Baumitovim silosom na objektu mešamo in nanašamo omet. Površino takoj poravnamo.",
-  },
-  {
-    title: "Po izvedbi",
-    body: "Stene pustimo, da se omet ravnomerno suši. Točen rok do barvanja vam povemo na objektu.",
-  },
-];
-
 const priprava = [
   "Dovod 380 V (trifazni priklop, 16 A) za mešalno enoto.",
   "Tekoča voda — vrtna pipa ali interni priklop.",
   "Dostop za silos in tovornjak.",
   "Suhe stene, brez prahu in obrise.",
-  "Zaščitene vse instalacije in odprtine, ki ne smejo dobiti ometa.",
+  "Zaščitene vse instalacije in odprtine.",
 ];
 
 const reference = [
   "Papirnica Količevo — fasada s cementnim strojnim ometom (5 stavb)",
-  "Stanovanjska stavba Zupančičeva jama, Ljubljana",
-  "Številne enodružinske hiše po Sloveniji v partnerstvu s Pergola montažnimi hišami",
+  "Številne enodružinske hiše po Sloveniji",
 ];
 
 const faqs = [
   {
-    q: "Kaj je Baumit Ratio 26 in zakaj ga uporabljate?",
+    q: "Kaj je Baumit Ratio 26 in zakaj se ga uporablja?",
     a: "Baumit Ratio 26 (oznaka tudi MPI 26) je enoslojni mavčno-apneno-cementni notranji omet z zrnavostjo 1 mm. Primeren je za bivalne prostore, kjer rabite gladko podlago za barvanje, in tudi za prostore s povišano vlažnostjo — kopalnice, kuhinje, kleti. Strojni nanos je hitrejši in enakomernejši od ročnega.",
   },
   {
@@ -62,8 +38,8 @@ const faqs = [
     a: "Standardno priporočilo je približno 1 cm debeline = 1 teden sušenja, ob normalnih pogojih (~20 °C, redno zračenje). Točen rok povemo na objektu glede na debelino in pogoje.",
   },
   {
-    q: "Ali delate tudi zunanje ometov in fasade?",
-    a: "Da — referenca papirnica Količevo je fasada s cementnim strojnim ometom na 5 stavbah. Pokličite za konkretno ponudbo.",
+    q: "Ali delate tudi zunanje omete in fasade?",
+    a: "Da — referenca papirnica Količevo je fasada s cementnim strojnim ometom. Pokličite nas za konkretno ponudbo.",
   },
   {
     q: "Kakšna je cena?",
@@ -79,7 +55,7 @@ export default function StrojniOmeti() {
         <ServiceHero
           eyebrow="Storitev"
           title="Strojni ometi"
-          subtitle="Notranji omet z Baumit Ratio 26 — gladek, enakomerno nanesen, primeren tudi za vlažne prostore. Iz Kamnika delamo po vsej Sloveniji."
+          subtitle="Notranji omet z Baumit Ratio 26 — gladek, enakomerno nanesen, primeren tudi za vlažne prostore. Uporabljamo seveda tudi druge vrste materialov, kot so cementni, apneni ali gips ometi."
         />
 
         <section className="py-16 sm:py-20">
@@ -90,11 +66,11 @@ export default function StrojniOmeti() {
             <div className="mt-6 space-y-4 text-base sm:text-lg text-[var(--color-text-muted)] leading-relaxed">
               <p>
                 Strojni omet je notranji omet, ki ga z mešalno enoto in silosom
-                nanesemo strojno, ne ročno z žlico. Mešanica je{" "}
+                nanesemo strojno. Mešanica je{" "}
                 <strong className="text-[var(--color-text)]">
                   enakomerna in z natančno količino vode
                 </strong>
-                , zato je manj možnosti za razpoke, neravnine ali šibke odseke.
+                , zato je manj možnosti za razpoke ali neravnine.
               </p>
               <p>
                 Uporabljamo material{" "}
@@ -106,8 +82,10 @@ export default function StrojniOmeti() {
                 vlažnostjo, kot so gospodinjske kopalnice, kuhinje in kleti.
               </p>
               <p>
-                Po nanosu površino takoj poravnamo — stene niso potrebne
-                kitanja, pripravljene so za barvanje.
+                Po nanosu površino takoj poravnamo. Stene lahko zagladimo
+                standardno ali na način s posebnim dletarjem, da stene ostanejo
+                gladke. To je primerno v primeru kasnejšega kitanja, ker je
+                manjša poraba le-tega.
               </p>
             </div>
           </div>
@@ -127,7 +105,7 @@ export default function StrojniOmeti() {
                 value="Bivalni prostori, kopalnice, kuhinje, kleti"
               />
               <Spec label="Nanos" value="Strojni — silos + mešalna enota" />
-              <Spec label="Površina" value="Gladka, pripravljena za barvo" />
+              <Spec label="Površina" value="Gladka, pripravljena za kitanje" />
             </div>
           </div>
         </section>
@@ -171,38 +149,6 @@ export default function StrojniOmeti() {
                 </p>
               </div>
             </div>
-
-            <p className="mt-6 text-base text-[var(--color-text-muted)]">
-              Za visok končni standard priporočamo gladke stene z metuljčkom.
-              Za standardne bivalne prostore je klasična izvedba povsem
-              zadostna.
-            </p>
-          </div>
-        </section>
-
-        <section className="py-16 sm:py-20">
-          <div className="mx-auto max-w-5xl px-4 sm:px-6">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--color-primary)]">
-              Kako poteka izvedba
-            </h2>
-            <ol className="mt-10 grid md:grid-cols-5 gap-5">
-              {koraki.map((step, i) => (
-                <li
-                  key={step.title}
-                  className="bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] p-5"
-                >
-                  <div className="text-3xl font-bold text-[var(--color-accent)]">
-                    {String(i + 1).padStart(2, "0")}
-                  </div>
-                  <h3 className="mt-3 text-base font-bold text-[var(--color-primary)]">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-[var(--color-text-muted)] leading-relaxed">
-                    {step.body}
-                  </p>
-                </li>
-              ))}
-            </ol>
           </div>
         </section>
 
@@ -243,7 +189,7 @@ export default function StrojniOmeti() {
         <section className="py-16 sm:py-20">
           <div className="mx-auto max-w-3xl px-4 sm:px-6">
             <h2 className="text-2xl sm:text-3xl font-bold text-[var(--color-primary)]">
-              Kje smo že delali ometov
+              Kje smo že delali omete
             </h2>
             <ul className="mt-8 divide-y divide-[var(--color-border)]">
               {reference.map((r) => (

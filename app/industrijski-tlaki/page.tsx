@@ -38,29 +38,6 @@ const uporaba = [
   },
 ];
 
-const koraki = [
-  {
-    title: "Ogled in projekt",
-    body: "Pregledamo objekt, preverimo dostope, pripravo in zahteve obremenitve.",
-  },
-  {
-    title: "Tehnična ponudba",
-    body: "Predlagamo debelino plošče, sestavo betonske mešanice in razpored dilatacij.",
-  },
-  {
-    title: "Vlivanje",
-    body: "Beton dovedemo s črpalko ali mikserjem in razlijemo po pripravljeni armaturi.",
-  },
-  {
-    title: "Glajenje s kvarcom",
-    body: "V svežo betonsko maso vsipamo kvarcni utrjevalec in večkratno strojno gladimo do gladke, sijajne površine.",
-  },
-  {
-    title: "Sušenje + zaščita",
-    body: "Po izvedbi nego betona za enakomerno sušenje. Površino lahko po želji impregniramo.",
-  },
-];
-
 const reference = [
   "Lek Mengeš (2025) — poslovni objekt, 3 in 4 nadstropja, skupaj 12.000 m²",
   "Bazen Kolezija, Ljubljana — vgradnja in glajenje betona pri prenovi",
@@ -71,7 +48,7 @@ const reference = [
 const faqs = [
   {
     q: "Kaj pomeni 'glajenje s kvarcom'?",
-    a: "V svežo betonsko maso vsipamo posebno mešanico s kvarčnim peskom in cementom (utrjevalec površine). Z večkratnim strojnim glajenjem ta mešanica utrdi zgornji sloj betona — dobimo trpežno, gosto, gladko in sijajno površino brez prahu, ki prenese težo viličarjev in stalni obrat strojev. To je ena izvedba 'iz enega kosa', brez dodatnih oblog.",
+    a: "V svežo betonsko maso vsipamo posebno mešanico s kvarčnim peskom in cementom (utrjevalec površine). Z večkratnim strojnim glajenjem ta mešanica utrdi zgornji sloj betona — dobimo trpežno, gosto, gladko in sijajno površino brez prahu, ki prenese težo viličarjev in stalno obtežitev strojev. To je ena izvedba 'iz enega kosa', brez dodatnih oblog.",
   },
   {
     q: "Kakšne obremenitve prenese?",
@@ -82,8 +59,8 @@ const faqs = [
     a: "Standardna izvedba je za notranje hale. Za zunanje površine (parkirišča, dovozi) prilagodimo recepturo in dodamo zaščito proti zmrzali in soljenju.",
   },
   {
-    q: "V kakšnih kvadraturah delate?",
-    a: "Izvedli smo posamezne objekte preko 12.000 m² (Lek Mengeš). Tako manjše delavnice (cca 100 m²) kot velike industrijske hale — mobilna oprema in 6-člana ekipa to obvladata.",
+    q: "V kakšnem obsegu je možna izvedba?",
+    a: "Izvedli smo že posamezne objekte preko 12.000 m² (Lek Mengeš). Seveda je možna izvedba tako manjših delavnic (cca 100 m²) kot tudi velikih industrijskih hal.",
   },
   {
     q: "Sodelujete z investitorji in gradbenimi izvajalci?",
@@ -157,32 +134,6 @@ export default function IndustrijskiTlaki() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        <section className="py-16 sm:py-20">
-          <div className="mx-auto max-w-5xl px-4 sm:px-6">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--color-primary)]">
-              Kako poteka izvedba
-            </h2>
-            <ol className="mt-10 grid md:grid-cols-5 gap-5">
-              {koraki.map((step, i) => (
-                <li
-                  key={step.title}
-                  className="bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] p-5"
-                >
-                  <div className="text-3xl font-bold text-[var(--color-accent)]">
-                    {String(i + 1).padStart(2, "0")}
-                  </div>
-                  <h3 className="mt-3 text-base font-bold text-[var(--color-primary)]">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-[var(--color-text-muted)] leading-relaxed">
-                    {step.body}
-                  </p>
-                </li>
-              ))}
-            </ol>
           </div>
         </section>
 
