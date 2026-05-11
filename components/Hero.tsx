@@ -48,8 +48,7 @@ export function Hero() {
             }`}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/85" />
-        <div className="absolute inset-0 bg-[var(--color-primary-dark)]/15 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/70" />
       </div>
 
       <div className="relative h-full mx-auto max-w-6xl px-4 sm:px-6 flex flex-col justify-end pb-14 sm:pb-20">
