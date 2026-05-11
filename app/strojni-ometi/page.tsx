@@ -15,7 +15,7 @@ const priprava = [
   "Dovod 380 V (trifazni priklop, 16 A) za mešalno enoto.",
   "Tekoča voda — vrtna pipa ali interni priklop.",
   "Dostop za silos in tovornjak.",
-  "Suhe stene, brez prahu in obrise.",
+  "Suhe stene, brez prahu in nečistoč.",
   "Zaščitene vse instalacije in odprtine.",
 ];
 
