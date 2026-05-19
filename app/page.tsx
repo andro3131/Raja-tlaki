@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ContactSection } from "@/components/ContactSection";
 import { Hero } from "@/components/Hero";
+import { Gallery } from "@/components/Gallery";
 import { FaqPageSchema } from "@/components/StructuredData";
 
 const services = [
@@ -150,6 +151,7 @@ export default function Home() {
         <ServicesPreview />
         <TrustBlock />
         <ReferenceHighlight />
+        <GallerySection />
         <Process />
         <About />
         <Faq />
@@ -309,6 +311,28 @@ function ReferenceHighlight() {
             </div>
           </div>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function GallerySection() {
+  return (
+    <section id="slike" className="py-20 sm:py-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="max-w-2xl">
+          <p className="text-sm font-semibold uppercase tracking-wider text-[var(--color-accent)]">
+            Galerija
+          </p>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-bold text-[var(--color-primary)]">
+            Slike s terena
+          </h2>
+          <p className="mt-4 text-base sm:text-lg text-[var(--color-text-muted)] leading-relaxed">
+            Iz našega vsakdanjega dela — stroji, izvedba estrihov in ekipa pri
+            delu. Kliknite na sliko za pogled v polni velikosti.
+          </p>
+        </div>
+        <Gallery />
       </div>
     </section>
   );
