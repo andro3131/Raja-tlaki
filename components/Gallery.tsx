@@ -3,27 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const IMAGES: string[] = [
-  "https://raja-tlaki.b-cdn.net/viber_image_2026-04-19_18-37-58-296.jpg",
-  "https://raja-tlaki.b-cdn.net/viber_image_2026-04-19_18-45-14-849.jpg",
-  "https://raja-tlaki.b-cdn.net/viber_image_2026-04-19_18-47-42-813.jpg",
-  "https://raja-tlaki.b-cdn.net/viber_image_2026-04-19_18-50-33-201.jpg",
-  "https://raja-tlaki.b-cdn.net/viber_image_2026-04-19_18-56-33-637.jpg",
-  "https://raja-tlaki.b-cdn.net/viber_image_2026-04-19_18-56-33-710.jpg",
-  "https://raja-tlaki.b-cdn.net/viber_image_2026-04-19_19-02-14-991.jpg",
-  "https://raja-tlaki.b-cdn.net/viber_image_2026-04-19_19-05-10-723.jpg",
-  "https://raja-tlaki.b-cdn.net/viber_image_2026-04-19_19-06-52-906.jpg",
-  "https://raja-tlaki.b-cdn.net/viber_image_2026-04-19_19-09-08-675.jpg",
-  "https://raja-tlaki.b-cdn.net/viber_image_2026-04-19_19-12-07-551.jpg",
-  "https://raja-tlaki.b-cdn.net/viber_image_2026-04-19_19-19-40-212.jpg",
-  "https://raja-tlaki.b-cdn.net/viber_image_2026-04-19_19-24-30-176.jpg",
-  "https://raja-tlaki.b-cdn.net/viber_image_2026-04-19_19-24-30-246.jpg",
-  "https://raja-tlaki.b-cdn.net/viber_image_2026-04-19_19-24-30-280.jpg",
-  "https://raja-tlaki.b-cdn.net/viber_image_2026-04-19_19-24-30-561.jpg",
-  "https://raja-tlaki.b-cdn.net/viber_image_2026-04-20_07-55-54-586.jpg",
-];
-
-export function Gallery() {
+export function Gallery({ images }: { images: string[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   useEffect(() => {
@@ -36,7 +16,7 @@ export function Gallery() {
         setOpenIndex((i) => (i !== null && i > 0 ? i - 1 : i));
       } else if (e.key === "ArrowRight") {
         setOpenIndex((i) =>
-          i !== null && i < IMAGES.length - 1 ? i + 1 : i,
+          i !== null && i < images.length - 1 ? i + 1 : i,
         );
       }
     };
@@ -48,12 +28,12 @@ export function Gallery() {
       document.body.style.overflow = "";
       window.removeEventListener("keydown", handleKey);
     };
-  }, [openIndex]);
+  }, [openIndex, images.length]);
 
   return (
     <>
-      <div className="mt-10 grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-        {IMAGES.map((src, i) => (
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+        {images.map((src, i) => (
           <button
             key={src}
             type="button"
@@ -129,7 +109,7 @@ export function Gallery() {
             </button>
           )}
 
-          {openIndex < IMAGES.length - 1 && (
+          {openIndex < images.length - 1 && (
             <button
               type="button"
               onClick={(e) => {
@@ -159,7 +139,7 @@ export function Gallery() {
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={IMAGES[openIndex]}
+              src={images[openIndex]}
               alt={`Raja-tlaki — slika ${openIndex + 1}`}
               fill
               sizes="100vw"
@@ -170,7 +150,7 @@ export function Gallery() {
           </div>
 
           <p className="absolute bottom-4 left-0 right-0 text-center text-white/70 text-sm tabular-nums">
-            {openIndex + 1} / {IMAGES.length}
+            {openIndex + 1} / {images.length}
           </p>
         </div>
       )}

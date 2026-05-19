@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { ContactSection } from "@/components/ContactSection";
 import { Hero } from "@/components/Hero";
 import { Gallery } from "@/components/Gallery";
+import { GALLERY_IMAGES } from "@/lib/galleryImages";
 import { FaqPageSchema } from "@/components/StructuredData";
 
 const services = [
@@ -329,10 +330,32 @@ function GallerySection() {
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[var(--color-text-muted)] leading-relaxed">
             Iz našega vsakdanjega dela — stroji, izvedba estrihov in ekipa pri
-            delu. Kliknite na sliko za pogled v polni velikosti.
+            delu.
           </p>
         </div>
-        <Gallery />
+        <div className="mt-10">
+          <Gallery images={GALLERY_IMAGES.slice(0, 6)} />
+        </div>
+        <div className="mt-10 text-center">
+          <Link
+            href="/galerija"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white font-semibold px-6 py-3 transition-colors"
+          >
+            Vse slike ({GALLERY_IMAGES.length})
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </Link>
+        </div>
       </div>
     </section>
   );
