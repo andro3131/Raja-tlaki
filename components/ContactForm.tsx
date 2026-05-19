@@ -1,37 +1,89 @@
 "use client";
 
+import emailjs from "@emailjs/browser";
 import { useState } from "react";
 
+const EMAILJS_SERVICE_ID = "service_hxwalcr";
+const EMAILJS_TEMPLATE_ID = "template_wp5y1gj";
+const EMAILJS_PUBLIC_KEY = "BaAka1O8XS8XA_5_V";
+
+type Status = "idle" | "sending" | "success" | "error";
+
 export function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const ime = String(formData.get("ime") || "");
-    const telefon = String(formData.get("telefon") || "");
-    const lokacija = String(formData.get("lokacija") || "");
-    const tip = String(formData.get("tip") || "");
-    const kvadratura = String(formData.get("kvadratura") || "");
-    const sporocilo = String(formData.get("sporocilo") || "");
+    if (status === "sending") return;
 
-    const subject = `Povpraševanje — ${tip || "Raja-tlaki"}`;
-    const body = [
-      `Ime: ${ime}`,
-      `Telefon: ${telefon}`,
-      `Lokacija: ${lokacija}`,
-      `Tip dela: ${tip}`,
-      `Kvadratura: ${kvadratura}`,
-      ``,
-      `Sporočilo:`,
-      sporocilo,
-    ].join("\n");
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const params = {
+      from_name: String(formData.get("ime") || "").trim() || "—",
+      phone: String(formData.get("telefon") || "").trim() || "—",
+      location: String(formData.get("lokacija") || "").trim() || "—",
+      service_type: String(formData.get("tip") || "").trim() || "—",
+      area: String(formData.get("kvadratura") || "").trim() || "—",
+      message: String(formData.get("sporocilo") || "").trim() || "—",
+    };
 
-    const mailto = `mailto:rajatlaki@gmail.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
-    setSubmitted(true);
+    setStatus("sending");
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        params,
+        EMAILJS_PUBLIC_KEY,
+      );
+      setStatus("success");
+      form.reset();
+    } catch (err) {
+      console.error("EmailJS send failed:", err);
+      setStatus("error");
+    }
+  }
+
+  if (status === "success") {
+    return (
+      <div className="bg-[var(--color-surface)] rounded-2xl p-8 sm:p-10 border border-[var(--color-border)] text-center">
+        <div className="mx-auto w-14 h-14 rounded-full bg-[var(--color-primary)]/10 flex items-center justify-center mb-5">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="text-[var(--color-primary)]"
+          >
+            <path d="m5 12 5 5L20 7" />
+          </svg>
+        </div>
+        <h3 className="text-xl font-bold text-[var(--color-primary)]">
+          Hvala, sporočilo je oddano.
+        </h3>
+        <p className="mt-3 text-base text-[var(--color-text-muted)] leading-relaxed max-w-md mx-auto">
+          Oglasili se vam bomo še isti dan. Če gre za nujno povpraševanje,
+          nas lahko tudi neposredno pokličete na{" "}
+          <a
+            href="tel:+38651349833"
+            className="text-[var(--color-primary)] font-semibold"
+          >
+            051 349 833
+          </a>
+          .
+        </p>
+        <button
+          type="button"
+          onClick={() => setStatus("idle")}
+          className="mt-6 text-sm font-semibold text-[var(--color-accent)] hover:underline"
+        >
+          Pošlji še eno povpraševanje
+        </button>
+      </div>
+    );
   }
 
   return (
@@ -114,30 +166,31 @@ export function ContactForm() {
 
       <button
         type="submit"
-        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-accent)] hover:bg-[var(--color-accent-hover)] text-white font-semibold px-6 py-3 transition-colors"
+        disabled={status === "sending"}
+        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-accent)] hover:bg-[var(--color-accent-hover)] disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold px-6 py-3 transition-colors"
       >
-        Pošlji povpraševanje
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M5 12h14M13 6l6 6-6 6" />
-        </svg>
+        {status === "sending" ? "Pošiljam…" : "Pošlji povpraševanje"}
+        {status !== "sending" && (
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        )}
       </button>
 
-      {submitted && (
-        <p className="text-sm text-[var(--color-text-muted)]">
-          Odpre se vaš e-poštni odjemalec s pripravljenim sporočilom — kliknite{" "}
-          <em>Pošlji</em>, da nam ga dejansko pošljete. Lahko pa nas tudi
-          neposredno pokličete na{" "}
+      {status === "error" && (
+        <p className="text-sm text-red-700 bg-red-50 border border-red-200 rounded-lg px-4 py-3">
+          Pošiljanje ni uspelo. Poskusite ponovno ali nas pokličite na{" "}
           <a
-            className="text-[var(--color-primary)] font-semibold"
+            className="font-semibold underline"
             href="tel:+38651349833"
           >
             051 349 833
