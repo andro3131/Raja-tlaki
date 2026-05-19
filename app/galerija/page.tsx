@@ -24,11 +24,6 @@ export default function Galerija() {
             <h1 className="mt-3 text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--color-primary)] leading-[1.05]">
               Slike s terena
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-[var(--color-text-muted)] leading-relaxed max-w-2xl">
-              {GALLERY_IMAGES.length} slik z gradbišč in iz delavnice — stroji,
-              izvedba strojnih estrihov, ekipa pri delu. Kliknite na sliko za
-              pogled v polni velikosti.
-            </p>
           </div>
         </section>
 
