@@ -359,13 +359,13 @@ function About() {
     <section id="o-nas" className="py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center">
-          <div className="lg:col-span-2 relative aspect-[4/5] rounded-2xl overflow-hidden border border-[var(--color-border)]">
+          <div className="lg:col-span-2 relative aspect-[3/2] rounded-2xl overflow-hidden border border-[var(--color-border)]">
             <Image
               src="https://raja-tlaki.b-cdn.net/viber_image_2026-04-19_19-25-23-075.jpg"
               alt="Uroš Ržišnik z ekipo Raja-tlaki"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
-              className="object-cover"
+              className="object-cover object-center"
             />
           </div>
 
