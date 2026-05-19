@@ -4,6 +4,10 @@ import { Footer } from "@/components/Footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { ServiceCTA } from "@/components/ServiceCTA";
 import { RelatedServices } from "@/components/RelatedServices";
+import {
+  FaqPageSchema,
+  BreadcrumbSchema,
+} from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Industrijski tlaki s kvarcom — za hale in poslovne prostore",
@@ -75,6 +79,13 @@ const faqs = [
 export default function IndustrijskiTlaki() {
   return (
     <>
+      <FaqPageSchema faqs={faqs} />
+      <BreadcrumbSchema
+        items={[
+          { name: "Domov", path: "/" },
+          { name: "Industrijski tlaki s kvarcom", path: "/industrijski-tlaki" },
+        ]}
+      />
       <Navbar />
       <main className="flex-1">
         <ServiceHero

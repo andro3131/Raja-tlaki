@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ContactSection } from "@/components/ContactSection";
 import { Hero } from "@/components/Hero";
+import { FaqPageSchema } from "@/components/StructuredData";
 
 const services = [
   {
@@ -142,6 +143,7 @@ const faqs = [
 export default function Home() {
   return (
     <>
+      <FaqPageSchema faqs={faqs} />
       <Navbar />
       <main className="flex-1">
         <Hero />

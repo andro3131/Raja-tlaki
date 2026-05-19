@@ -4,6 +4,10 @@ import { Footer } from "@/components/Footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { ServiceCTA } from "@/components/ServiceCTA";
 import { RelatedServices } from "@/components/RelatedServices";
+import {
+  FaqPageSchema,
+  BreadcrumbSchema,
+} from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Strojni ometi — Baumit Ratio 26",
@@ -50,6 +54,13 @@ const faqs = [
 export default function StrojniOmeti() {
   return (
     <>
+      <FaqPageSchema faqs={faqs} />
+      <BreadcrumbSchema
+        items={[
+          { name: "Domov", path: "/" },
+          { name: "Strojni ometi", path: "/strojni-ometi" },
+        ]}
+      />
       <Navbar />
       <main className="flex-1">
         <ServiceHero

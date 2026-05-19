@@ -4,6 +4,10 @@ import { Footer } from "@/components/Footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { ServiceCTA } from "@/components/ServiceCTA";
 import { RelatedServices } from "@/components/RelatedServices";
+import {
+  FaqPageSchema,
+  BreadcrumbSchema,
+} from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Toplotna izolacija + stirobeton",
@@ -29,6 +33,16 @@ const faqs = [
 export default function ToplotnaIzolacija() {
   return (
     <>
+      <FaqPageSchema faqs={faqs} />
+      <BreadcrumbSchema
+        items={[
+          { name: "Domov", path: "/" },
+          {
+            name: "Toplotna izolacija + stirobeton",
+            path: "/toplotna-izolacija",
+          },
+        ]}
+      />
       <Navbar />
       <main className="flex-1">
         <ServiceHero
