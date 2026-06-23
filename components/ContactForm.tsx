@@ -20,6 +20,7 @@ export function ContactForm() {
     const formData = new FormData(form);
     const params = {
       from_name: String(formData.get("ime") || "").trim() || "—",
+      from_email: String(formData.get("email") || "").trim(),
       phone: String(formData.get("telefon") || "").trim() || "—",
       location: String(formData.get("lokacija") || "").trim() || "—",
       service_type: String(formData.get("tip") || "").trim() || "—",
@@ -106,6 +107,15 @@ export function ContactForm() {
           autoComplete="tel"
         />
       </div>
+
+      <Field
+        name="email"
+        label="Email"
+        required
+        type="email"
+        autoComplete="email"
+        placeholder="ime@primer.si"
+      />
 
       <Field
         name="lokacija"
