@@ -18,6 +18,15 @@ export function ContactForm() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+
+    // Honeypot: skrito polje, ki ga izpolnijo samo boti. Če ima vrednost,
+    // oddajo tiho zavržemo (prikažemo "uspeh", da bota ne opozorimo) in NE pošljemo maila.
+    if (String(formData.get("website") || "").trim() !== "") {
+      setStatus("success");
+      form.reset();
+      return;
+    }
+
     const params = {
       from_name: String(formData.get("ime") || "").trim() || "—",
       from_email: String(formData.get("email") || "").trim(),
@@ -92,6 +101,21 @@ export function ContactForm() {
       onSubmit={handleSubmit}
       className="bg-[var(--color-surface)] rounded-2xl p-6 sm:p-8 border border-[var(--color-border)] space-y-4"
     >
+      {/* Honeypot proti spamu — vizualno skrito; ljudje ga ne izpolnijo, boti ga */}
+      <div
+        aria-hidden="true"
+        className="absolute -left-[9999px] top-0 h-0 w-0 overflow-hidden"
+      >
+        <label htmlFor="website">Spletna stran (pustite prazno)</label>
+        <input
+          id="website"
+          name="website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
+
       <div className="grid sm:grid-cols-2 gap-4">
         <Field
           name="ime"
